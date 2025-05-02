@@ -1,0 +1,31 @@
+1. buat database
+CREATE DATABASE perpus66;
+
+2. buat table
+
+- genres
+CREATE TABLE genres( id integer AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT null );
+
+- books
+CREATE TABLE books( id integer AUTO_INCREMENT PRIMARY KEY, title varchar(255) not null, stock integer not null, genre_id integer NOT null, FOREIGN KEY(genre_id) REFERENCES genres(id) );
+
+
+3. insert Data
+- genres
+INSERT INTO genres(name) VALUES("Action"),("Drama"),("comedy");
+
+-books
+INSERT into books(title, stock, genre_id) VALUES("Larkar Pelangi", 40, 2);
+INSERT into books(title, stock, genre_id) VALUES("Ayah", 50, 2);
+INSERT into books(title, stock, genre_id) VALUES("Kambing Jantan", 80, 3);
+
+4. Select Data
+4a. SELECT id, title, stock from books;
+
+4b - SELECT * FROM books WHERE stock > 45;
+   - SELECT * FROM books where title LIKE "%pelangi%";
+
+4c SELECT books.*, genres.name FROM books INNER JOIN genres ON books.genre_id = genres.id;
+
+5. update data
+UPDATE books SET stock=90 WHERE id = 1;
