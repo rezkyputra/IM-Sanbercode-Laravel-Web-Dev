@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Halaman Pendaftaran</h1>
+
+    <form method="post" action="welcome.html">
+      <label>Full Name</label> <br />
+      <input
+        type="text"
+        name="fullname"
+        required
+        placeholder="Masukan Nama Lengkap anda"
+      />
+      <br />
+      <br />
+      <label>Usia</label> <br />
+      <input type="number" name="usia" /> <br />
+      <br />
+      <label>Password</label> <br />
+      <input type="password" name="pass" /> <br />
+      <br />
+      <label>Status</label> <br />
+      <input type="radio" value="1" name="status" /> Menikah <br />
+      <input type="radio" value="2" name="status" /> Belum Menikah <br />
+      <br />
+      <label>Skill</label> <br />
+      <input type="checkbox" value="1" name="skill" />Laravel <br />
+      <input type="checkbox" value="2" name="skill" />HTML/CSS <br />
+      <input type="checkbox" value="3" name="skill" />Javascript <br />
+      <input type="checkbox" value="4" name="skill" />PHP <br />
+      <input type="checkbox" value="5" name="skill" />Mysql <br />
+      <br />
+      <label>Kota</label> <br />
+      <select name="kota">
+        <option value="1">Makassar</option>
+        <option value="2">Medan</option>
+        <option value="3">Jakarta</option>
+        <option value="4">Surabaya</option>
+        <option value="5">Bandung</option>
+      </select>
+      <br />
+      <br />
+
+      <label>Alamat</label> <br />
+      <textarea name="alamat" cols="50" rows="10"></textarea> <br />
+      <br />
+
+      <input type="submit" value="Daftar" />
+    </form>
+  </body>
+</html>
