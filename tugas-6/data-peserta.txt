@@ -3,3 +3,4 @@ Data Peserta Sanbercode Bootcamp Laravel Web Dev
 2. Email: rezky@mail.com
 3. Akun Gitlab/Github: https://github.com/rezkyputra
 4. Akun Telegram: @Rezkyputra1996
+5. Hobby: Tidur
