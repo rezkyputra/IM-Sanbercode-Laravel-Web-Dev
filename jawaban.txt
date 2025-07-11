@@ -1,0 +1,32 @@
+1. Buat Database
+create database perpus;
+
+2. Buat Table
+- genres
+CREATE table genres(
+	id integer PRIMARY KEY AUTO_INCREMENT,
+    	name varchar(255) NOT null
+)
+
+- books
+CREATE TABLE books( id integer AUTO_INCREMENT PRIMARY KEY, title varchar(255) NOT null, price integer NOT null, genre_id integer NOT null, FOREIGN KEY(genre_id) REFERENCES genres(id) );
+
+
+3. Insert Data
+
+-genres
+INSERT INTO genres (name) VALUES("Action"), ("Comedy"), ("Drama");
+
+-books
+INSERT INTO books(title, price, genre_id) VALUES("Ayah", 30000, 3);
+INSERT INTO books(title, price, genre_id) VALUES("Perahu Kertas", 40000, 3);
+INSERT INTO books(title, price, genre_id) VALUES("Kambing Hitam", 20000, 2);
+
+4. Select Data
+4a. SELECT id, title, price from books;
+4b - SELECT * FROM books WHERE price > 25000;
+   - SELECT * FROM books WHERE title LIKE "%ahu%";
+4c SELECT books.*, genres.name as genre FROM books LEFT JOIN genres ON books.genre_id = genres.id;
+
+5. Update Data
+UPDATE books SET price = 50000 WHERE id = 1;
