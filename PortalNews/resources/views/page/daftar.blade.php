@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Halaman Daftar</h1>
+@extends('layouts.master')
+@section('title')
+    Halaman Daftar
+@endsection
+@section('content')
+    
     <form method="POST" action="/home">
         @csrf
 
@@ -18,5 +15,5 @@
         <input type="submit" value="Daftar">
 
     </form>
-</body>
-</html>
+@endsection
+    
