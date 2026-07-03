@@ -1,0 +1,30 @@
+1. Buat Database
+CREATE DATABASE library78;
+
+2. Buat Table
+- Genre
+CREATE TABLE genres( id integer PRIMARY KEY AUTO_INCREMENT, name varchar(255) NOT null );
+- Books
+CREATE table books( id integer AUTO_INCREMENT PRIMARY KEY, title varchar(255) NOT null, stock integer NOT null, genre_id integer NOT null, CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genres(id));
+
+3. Insert Data
+- Genre
+INSERT INTO genres(name) VALUES("Pendidikan"), ("Manga"), ("Komik");
+- Books
+INSERT INTO books(title, stock, genre_id)VALUES("Belajar Javascript Pemula", 40, 1);
+INSERT INTO books(title, stock, genre_id)VALUES("Belajar PHP Pemula", 40, 1);
+INSERT INTO books(title, stock, genre_id)VALUES("One Piece", 20, 3);
+
+4. Select Data
+4a
+SELECT id, title, stock FROM books;
+
+4b
+- SELECT * from books WHERE stock > 30;
+- SELECT * from books WHERE title LIKE "%PHP%";
+
+4c
+SELECT books.*, genres.name AS genre FROM books INNER JOIN genres ON books.genre_id = genres.id;
+
+5. Update Data
+UPDATE books SET stock=60 WHERE id=3;
